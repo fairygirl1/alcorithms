@@ -6,10 +6,10 @@
 
 class Solution:
   def getDecimalValue(self, head: ListNode) -> int:
-    ans = ''
+    ans = 0
 
     while head: #когда head не нулевой
-      ans += str(head.val)
+      ans = ans * 2 + head.val
       head = head.next
 
     return ans
