@@ -1,13 +1,17 @@
+# динамическое программирование
+
 class Solution:
   def rob(self, nums: List[int]) -> int:
+  
     if not nums:
       return 0
+      # если содержится только один элемент, он же и возвращается, тк выбора больше нет
     if len(nums) < 2:
       return nums[0]
 
     def rob(l: int, r: int) -> int:
-      dp1 = 0
-      dp2 = 0
+      dp1 = 0 # до текущего индекса
+      dp2 = 0 # до предыд индекса
 
       for i in range(l, r + 1):
         temp = dp1
