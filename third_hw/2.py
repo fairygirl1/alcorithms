@@ -4,14 +4,16 @@
 # The most significant bit is at the head of the linked list.
 
 
-class Solution:
-  def getDecimalValue(self, head: ListNode) -> int:
-    ans = 0
+head = [1,0,1]
+def getDecimalValue(head) -> int:
+  ans = 0
 
-    while head: #когда head не нулевой
-      ans = ans * 2 + head.val
-      head = head.next
+  while head: #когда head не нулевой
+    ans = ans * 2 + head.val
+    head = head.next
 
-    return ans
+  return ans
+
+print(getDecimalValue(head))
 
 # O(n)
