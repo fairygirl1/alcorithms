@@ -5,7 +5,14 @@
 # Решается поиском в глубину - прохожу по матрице построчно, когда встречаю единичку, 
 # увеличиваю счетчик и дальше проверяю наличие единичек во всех направлениях.
 
-def numIslands(self, grid: List[List[str]]) -> int:
+grid = [
+  ["1","1","1","1","0"],
+  ["1","1","0","1","0"],
+  ["1","1","0","0","0"],
+  ["0","0","0","0","0"]
+]
+
+def numIslands(grid) -> int:
         if not grid: return 0
         row = len(grid)
         col = len(grid[0])
@@ -27,4 +34,5 @@ def numIslands(self, grid: List[List[str]]) -> int:
                     findIsland(x,y)         
         return count
 
+print(numIslands(grid))
 # O(n)
