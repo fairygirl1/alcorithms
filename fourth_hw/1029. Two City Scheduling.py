@@ -13,6 +13,10 @@ such that exactly n people arrive in each city.
 def twoCitySchedCost(costs):
     total_cost = 0
     diff = [(a - b, i) for i, (a, b) in enumerate(costs)]  # Разница стоимостей между городами A и B, второй элемент индекс разницы в исходном списке
+    # позволяет перебирать элементы списка costs 
+    # вместе с их индексами, присваивая их значения 
+    # переменным a и b на каждой итерации цикла.
+
     print(diff)
     diff.sort()  # Сортировка по возрастанию разницы
     print(diff)
@@ -30,3 +34,17 @@ def twoCitySchedCost(costs):
 costs = [[259,770],[448,54],[926,667],[184,139],[840,118],[577,469]]
 
 print(twoCitySchedCost(costs))
+
+# def twoCitySchedCost(self, costs: List[List[int]]) -> int:
+#     diffs = []
+#     for c1, c2 in costs:
+#         diffs.append([c2-c1, c1, c2])
+#     diffs.sort() #sorting by first value in the array
+#     # [[-350, 400, 50], [-10, 30, 20], | [10, 10, 20], [170, 30, 200]]
+#     res = 0
+#     for i in range(len(diffs)):
+#         if i < len(diffs)//2:
+#             res += diffs[i][2] # third el of curr list in array
+#         else:
+#             res += diffs[i][1]
+#     return res
