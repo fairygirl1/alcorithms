@@ -43,6 +43,7 @@ root.right = TreeNode(6)
 root.left.left = TreeNode(1)
 root.left.right = TreeNode(3)
 
+
 solution = Solution()
 result = solution.getMinimumDifference(root)
 print(result)

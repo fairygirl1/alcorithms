@@ -9,7 +9,6 @@ def dijkstra(graph, start):
     visited = set()  # Множество для отслеживания посещенных вершин
     heap = [(0, start)]  # Куча для выбора вершины с наименьшим расстоянием
 
-    # Инициализация расстояний
     for vertex in graph:
         distances[vertex] = sys.maxsize
     distances[start] = 0
